@@ -30,4 +30,10 @@ source .venv/bin/activate
 uv pip install -r requirements.txt
 ```
 
+## setup environment variables
 
+```bash
+$ cp .env.example .env
+```
+
+setup your environment in the '.env' file. Like "OPEN_API_KEY" value.
