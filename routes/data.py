@@ -26,7 +26,7 @@ async def upload_data(request: Request, project_id: str, file: UploadFile,
                     app_settings = Depends(get_settings)):
 
         
-        project_model = ProjectModel(
+        project_model = await ProjectModel.create_instance(
             db_client=request.app.db_client
         )
 
@@ -85,8 +85,7 @@ async def upload_data(request: Request, project_id: str, file: UploadFile,
         return JSONResponse(
             content = {
                 "signal": ResponseSignal.File_Uploaded_Succesfully.value,
-                "file_id": str(asset_record.id),
-                "project_id": str(project.id)  
+                "file_id": str(asset_record.id)  
             }
         )
 

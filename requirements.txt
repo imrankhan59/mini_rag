@@ -10,3 +10,5 @@ langchain-community
 pypdf
 motor
 openai
+cohere
+qdrant-client

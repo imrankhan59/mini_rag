@@ -11,7 +11,7 @@ class ProjectController(BaseController):
     def get_project_path(self, project_id):
 
         project_dir = os.path.join(
-            self.file_dir,
+            self.files_dir,
             project_id
         )
 
